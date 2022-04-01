@@ -52,8 +52,8 @@ app.get('/about', (req, res, next) => {
     res.sendFile(path.resolve(`${__dirname}/about.html`));
 });
 
-app.get('/roadmap', (req, res, next) => {
-    res.sendFile(path.resolve(`${__dirname}/roadmap.html`));
+app.get('/faq', (req, res, next) => {
+    res.sendFile(path.resolve(`${__dirname}/faq.html`));
 });
 
 app.listen(port)
