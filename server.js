@@ -45,18 +45,15 @@ app.use((err, req, res, next) => {
 });
 
 app.get('/', (req, res, next) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream((`${__dirname}/index.html`).pipe(res))
+    res.sendFile(path.resolve(`${__dirname}/index.html`));
 });
 
 app.get('/about', (req, res, next) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream((`${__dirname}/about.html`).pipe(res))
+    res.sendFile(path.resolve(`${__dirname}/about.html`));
 });
 
-app.get('/faq', (req, res, next) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream((`${__dirname}/faq.html`).pipe(res))
+app.get('/roadmap', (req, res, next) => {
+    res.sendFile(path.resolve(`${__dirname}/roadmap.html`));
 });
 
 app.listen(port)
