@@ -3088,6 +3088,7 @@ textarea {
 
 .brand-items .brand-item {
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 .brand-items .slick-track {
@@ -3921,4 +3922,10 @@ a {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+	.item-logo {
+		margin-left: 0px !important;
+	}
 }
